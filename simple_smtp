@@ -1,0 +1,17 @@
+import smtplib
+ 
+to = 'ksanchez@micorreo.com'
+tricom_user = 'usuario@isp.net'
+tricom_pwd = '***'
+smtpserver = smtplib.SMTP("smtp.gmail.com",587)
+smtpserver.ehlo()
+smtpserver.starttls()
+smtpserver.ehlo
+smtpserver.login(tricom_user, tricom_pwd)
+header = 'To:' + to + '\n' + 'From: ' + tricom_user + '\n' + 'Subject: Envio Correro AUTOMATIZADO!!! \n'
+msg = header + '\n Esto es una prueba de correo automatizado desde sender. \n\n'
+smtpserver.sendmail(tricom_user, to, msg)
+print "-"*10
+print 'Enviado satisfactoriamente!'
+print "-"*10
+smtpserver.close()
