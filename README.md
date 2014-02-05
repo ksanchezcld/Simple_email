@@ -1,4 +1,4 @@
 Simple_email
 ============
 
-Send_Simple_email
+Envio simple de correo.
